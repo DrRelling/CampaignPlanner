@@ -1,0 +1,13 @@
+<div
+  cdkDrag
+  class="popup-note"
+  [ngStyle]="{ 'z-index': zIndex }"
+  (mousedown)="moveToFront()"
+>
+  <div class="note-header" cdkDragHandle>
+    <p>{{ data.title }}</p>
+    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+  </div>
+  <div class="note-body">Test</div>
+  <div class="note-footer"></div>
+</div>
