@@ -1,10 +1,12 @@
 <div
-  cdkDrag
+  ngDraggable
+  ngResizable
   class="popup-note"
+  [handle]="dragHandle"
   [ngStyle]="{ 'z-index': zIndex }"
   (mousedown)="moveToFront()"
 >
-  <div class="note-header" cdkDragHandle>
+  <div class="note-header" #dragHandle>
     <p>{{ data.title }}</p>
     <mat-icon class="close-icon" (click)="close()">close</mat-icon>
   </div>

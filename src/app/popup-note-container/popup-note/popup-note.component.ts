@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PopupNote } from 'src/app/interfaces/popup-note';
+import { PopupNote } from 'src/app/popup-note-container/interfaces/popup-note';
 import { PopupNoteService } from 'src/app/services/popup-note.service';
 
 @Component({

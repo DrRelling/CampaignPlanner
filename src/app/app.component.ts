@@ -9,5 +9,5 @@ import { PopupNoteService } from './services/popup-note.service';
 export class AppComponent {
   title = 'Dr Relling\'s Campaign Planner';
 
-  constructor(public popupNoteService: PopupNoteService) {}
+  constructor() {}
 }

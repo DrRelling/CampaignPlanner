@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PopupNote } from '../interfaces/popup-note';
+import { PopupNote } from '../popup-note-container/interfaces/popup-note';
 
 @Injectable({
   providedIn: 'root',
