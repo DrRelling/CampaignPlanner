@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopupNoteService } from '../../services/popup-note.service';
-import { PopupNote } from '../../interfaces/popup-note';
+import { PopupNote } from '../../interfaces/popup-note.interface';
 
 @Component({
   selector: 'app-popup-note-container',

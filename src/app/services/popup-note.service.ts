@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, distinctUntilChanged, Subject } from 'rxjs';
-import { PopupNote } from '../interfaces/popup-note';
+import { PopupNote } from '../interfaces/popup-note.interface';
 
 @Injectable({
   providedIn: 'root',

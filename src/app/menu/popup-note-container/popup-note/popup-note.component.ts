@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
-import { PopupNote } from 'src/app/interfaces/popup-note';
+import { PopupNote } from 'src/app/interfaces/popup-note.interface';
 import { PopupNoteService } from 'src/app/services/popup-note.service';
 
 @Component({
