@@ -1,5 +1,6 @@
 <mat-icon id="add_note" (click)="addNote()">add_circle_outline</mat-icon>
 <div id="popup_note_container">
+  {{ popupNotes.length }}
   <app-popup-note
     *ngFor="let note of popupNotes"
     [data]="note"

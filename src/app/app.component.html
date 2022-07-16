@@ -1,2 +1,4 @@
-<app-popup-note-container></app-popup-note-container>
-<router-outlet></router-outlet>
+<div id="container" [ngClass]="{ 'resizing-note': resizingNote }">
+  <app-popup-note-container></app-popup-note-container>
+  <router-outlet></router-outlet>
+</div>

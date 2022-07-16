@@ -1,15 +1,27 @@
 <div
-  ngDraggable
-  ngResizable
+  cdkDrag
+  #note
   class="popup-note"
-  [handle]="dragHandle"
-  [ngStyle]="{ 'z-index': zIndex }"
+  [style.zIndex]="zIndex"
+  [style.width.px]="width"
+  [style.height.px]="height"
   (mousedown)="moveToFront()"
+  (window:mouseup)="stopResize()"
 >
-  <div class="note-header" #dragHandle>
-    <p>{{ data.title }}</p>
-    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+  <div
+    class="note-header"
+    [ngClass]="{ 'override-cursor': globalNoteResizing }"
+    cdkDragHandle
+  >
+    <p class="note-title">{{ data.title }}</p>
+    <mat-icon
+      class="close-icon"
+      [ngClass]="{ 'override-cursor': globalNoteResizing }"
+      (click)="close()"
+      >close</mat-icon
+    >
   </div>
-  <div class="note-body">Test</div>
+  <div class="note-body">{{ data.body }}</div>
   <div class="note-footer"></div>
+  <div class="resize-action" (mousedown)="startResize()"></div>
 </div>

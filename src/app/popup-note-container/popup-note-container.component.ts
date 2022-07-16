@@ -5,20 +5,18 @@ import { PopupNote } from './interfaces/popup-note';
 @Component({
   selector: 'app-popup-note-container',
   templateUrl: './popup-note-container.component.html',
-  styleUrls: ['./popup-note-container.component.scss']
+  styleUrls: ['./popup-note-container.component.scss'],
 })
 export class PopupNoteContainerComponent implements OnInit {
-
   public popupNotes: PopupNote[] = [];
 
-  constructor(private popupNoteService: PopupNoteService) { }
+  constructor(private popupNoteService: PopupNoteService) {}
 
   ngOnInit(): void {
-    this.popupNotes = this.popupNoteService.notes;
+    this.popupNoteService.notes$.subscribe((n) => (this.popupNotes = n));
   }
 
   public addNote(): void {
     console.log('New note');
   }
-
 }
