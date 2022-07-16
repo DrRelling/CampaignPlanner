@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, distinctUntilChanged, Subject } from 'rxjs';
-import { PopupNote } from '../popup-note-container/interfaces/popup-note';
+import { PopupNote } from '../interfaces/popup-note';
 
 @Injectable({
   providedIn: 'root',
@@ -17,8 +17,8 @@ export class PopupNoteService {
   private topZIndex = 0;
 
   constructor() {
-    this.createNote();
-    this.createNote();
+    // this.createNote();
+    // this.createNote();
   }
 
   public getNewTopZIndex(): number {

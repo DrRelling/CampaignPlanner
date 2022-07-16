@@ -1,0 +1,10 @@
+#planner {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 3rem);
+}
+
+app-sidebar {
+    min-height: 100%;
+    width: 30%;
+}

@@ -6,18 +6,30 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PopupNoteComponent } from './popup-note-container/popup-note/popup-note.component';
 import { PlannerComponent } from './planner/planner.component';
-import { PopupNoteContainerComponent } from './popup-note-container/popup-note-container.component';
+
+import { MenuComponent } from './menu/menu.component';
+import { PopupNoteComponent } from './menu/popup-note-container/popup-note/popup-note.component';
+import { PopupNoteContainerComponent } from './menu/popup-note-container/popup-note-container.component';
+import { SidebarComponent } from './planner/sidebar/sidebar.component';
+import { PlannerFormComponent } from './planner/planner-form/planner-form.component';
 
 @NgModule({
-  declarations: [AppComponent, PopupNoteComponent, PlannerComponent, PopupNoteContainerComponent],
+  declarations: [
+    AppComponent,
+    PopupNoteComponent,
+    PlannerComponent,
+    PopupNoteContainerComponent,
+    MenuComponent,
+    SidebarComponent,
+    PlannerFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
