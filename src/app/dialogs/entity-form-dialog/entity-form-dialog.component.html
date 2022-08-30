@@ -1,0 +1,19 @@
+<h2>New Entity</h2>
+<mat-form-field>
+  <mat-label>Entity type</mat-label>
+  <mat-select (selectionChange)="changeSelectedTemplate($event)">
+    <mat-option *ngFor="let template of templates" [value]="template.id">
+      {{ template.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<form [formGroup]="plannerForm">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" />
+  </mat-form-field>
+  <div formArrayName="aliases">
+    <mat-form-field *ngFor="let alias of aliases.controls; let i = index">
+      <input matInput [placeholder]="templateFields[i].label" id="alias-{{ i }}" type="text" [formControlName]="i" />
+    </mat-form-field>
+  </div>
+</form>

@@ -1,1 +1,8 @@
-<p>planner-form works!</p>
+<form [formGroup]="plannerForm">
+    <label for="name">Alias:</label>
+    <!-- <input id="name" type="text" [formControlName]="name" /> -->
+    <!-- <div *ngFor="let alias of aliases.controls; let i = index">
+      <label for="alias-{{ i }}">Alias:</label>
+      <input id="alias-{{ i }}" type="text" [formControlName]="i" />
+    </div> -->
+</form>
